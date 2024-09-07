@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="icon" href="./logo.png" />
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" href="./logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        "
+      >
+        <h1 style="color: aliceblue">Calculator</h1>
+        <label for="historyToggle" style="cursor: pointer">
+          <input type="checkbox" id="historyToggle" style="display: none" />
+          <img src="./img/history.png" alt="history button" />
+        </label>
+        <div id="history">
+          <h3 style="font-size: 2rem; text-align: center">History</h3>
+          <div class="history-container"></div>
+          <button id="clearHistoryBtn">
+            <img src="./img/dustbin.png" alt="delete history" />
+          </button>
+        </div>
+      </div>
+      <div class="display">
+        <div id="expressionDisplay"></div>
+        <input placeholder="0" autofocus readonly />
+      </div>
+      <div class="button-container">
+        <div class="buttons">
+          <button id="clearBtn">C</button>
+          <button id="clearBtn" onclick="deleteLastCharacter()">
+            <img src="./img/delete.png" alt="delete button" />
+          </button>
+          <button style="color: blueviolet">%</button>
+          <button style="color: rgb(220, 171, 24)">÷</button>
+        </div>
+        <div class="buttons">
+          <button>9</button>
+          <button>8</button>
+          <button>7</button>
+          <button style="color: rgb(220, 24, 200)">×</button>
+        </div>
+        <div class="buttons">
+          <button>6</button>
+          <button>5</button>
+          <button>4</button>
+          <button style="color: rgb(24, 220, 31)">+</button>
+        </div>
+        <div class="buttons">
+          <button>3</button>
+          <button>2</button>
+          <button>1</button>
+          <button style="color: rgb(83, 152, 225)">-</button>
+        </div>
+        <div class="buttons">
+          <button>.</button>
+          <button>0</button>
+          <button>00</button>
+          <button id="equalBtn">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </html>

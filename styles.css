@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+body,
+html {
+  background-color: #070022;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.calculator {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.calculator .display {
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 20px #424242;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.display #expressionDisplay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.8rem;
+}
+
+.calculator .display input {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+  text-align: end;
+  padding: 10px 20px;
+  cursor: default;
+  color: aliceblue;
+}
+.display input::placeholder {
+  color: rgb(161, 163, 165);
+}
+#history {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 300px;
+  flex-direction: column;
+  gap: 10px;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 7px;
+  display: none;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px #000;
+}
+.history-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+.history-container span {
+  font-size: 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+#history button {
+  width: 100%;
+  padding: 5px;
+  background: rgb(198, 55, 55);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  height: 100%;
+}
+.button-container .buttons {
+  display: flex;
+  gap: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons button {
+  height: 60px;
+  width: 60px;
+  color: whitesmoke;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  transition: 0.1s ease-in;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.buttons button:hover {
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#clearBtn {
+  color: rgb(1, 201, 174);
+}
+#equalBtn {
+  background: #00a0ff;
+}
